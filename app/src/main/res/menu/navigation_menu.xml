@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/it_home"
+        android:title="@string/it_home" />
+
+    <item
+        android:id="@+id/it_about"
+        android:title="@string/it_about" />
+
+    <item
+        android:id="@+id/it_department"
+        android:title="@string/it_department" />
+
+    <item
+        android:id="@+id/it_events"
+        android:title="@string/it_events" />
+
+    <item
+        android:id="@+id/it_contacts"
+        android:title="@string/it_contacts" />
+</menu>
