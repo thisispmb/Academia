@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
@@ -20,48 +21,48 @@ public class MainActivity extends AppCompatActivity {
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
         NavigationView navigationView = findViewById(R.id.navigation_view);
 
+        // Connect toolbar with navigation drawer
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.open_drawer, R.string.close_drawer
         );
+
+        // Listen for changes to the drawer
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        navigationView.setCheckedItem(R.id.it_home);
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, new HomeFragment())
-                .commit();
+        // Set initial Fragment if no saved state
+        if (savedInstanceState == null) {
+            navigationView.setCheckedItem(R.id.it_home);
+            showFragment(new HomeFragment());
+        }
 
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
 
-            if (id == R.id.it_about) {
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.fragment_container, new AboutFragment())
-                        .commit();
+            if (id == R.id.it_home) {
+                showFragment(new HomeFragment());
+            } else if (id == R.id.it_about) {
+                showFragment(new AboutFragment());
             } else if (id == R.id.it_department) {
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.fragment_container, new DepartmentFragment())
-                        .commit();
+                showFragment(new DepartmentFragment());
             } else if (id == R.id.it_events) {
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.fragment_container, new EventsFragment())
-                        .commit();
+                showFragment(new EventsFragment());
             } else if (id == R.id.it_contacts) {
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.fragment_container, new ContactsFragment())
-                        .commit();
-            } else if (id == R.id.it_home) {
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container, new HomeFragment())
-                        .commit();
+                showFragment(new EventsFragment());
             }
+
+            // Closing the drawer after user selected a menu
             drawerLayout.closeDrawers();
             return true;
         });
+    }
+
+    private void showFragment(Fragment fragment) {
+        // Replace current Fragment
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .commit();
     }
 
 }
