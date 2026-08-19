@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (id == R.id.it_events) {
                 showFragment(new EventsFragment());
             } else if (id == R.id.it_contacts) {
-                showFragment(new EventsFragment());
+                showFragment(new ContactsFragment());
             }
 
             // Closing the drawer after user selected a menu
