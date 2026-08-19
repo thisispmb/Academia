@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        navigationView.setCheckedItem(R.id.it_home);
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, new Home())
                 .commit();
