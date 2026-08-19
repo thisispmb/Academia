@@ -11,4 +11,5 @@
     <string name="about_fragment">About Us Fragment</string>
     <string name="department_fragment">Department Fragment</string>
     <string name="events_fragment">Events Fragment</string>
+    <string name="contact_fragment">Contact Fragment</string>
 </resources>
