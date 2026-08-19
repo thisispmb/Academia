@@ -10,4 +10,5 @@
     <string name="home_fragment">Home Fragment</string>
     <string name="about_fragment">About Us Fragment</string>
     <string name="department_fragment">Department Fragment</string>
+    <string name="events_fragment">Events Fragment</string>
 </resources>
