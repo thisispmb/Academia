@@ -5,11 +5,11 @@
     <string name="it_department">Department</string>
     <string name="it_events">Events</string>
     <string name="it_contacts">Contacts</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home_fragment">Home Fragment</string>
     <string name="about_fragment">About Us Fragment</string>
     <string name="department_fragment">Department Fragment</string>
     <string name="events_fragment">Events Fragment</string>
     <string name="contact_fragment">Contact Fragment</string>
+    <string name="open_drawer">Open navigation drawer</string>
+    <string name="close_drawer">Close navigation drawer</string>
 </resources>
