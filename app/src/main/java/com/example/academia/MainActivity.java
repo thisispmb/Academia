@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         navigationView.setCheckedItem(R.id.it_home);
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, new Home())
+                .replace(R.id.fragment_container, new HomeFragment())
                 .commit();
 
         navigationView.setNavigationItemSelectedListener(item -> {
@@ -37,26 +37,26 @@ public class MainActivity extends AppCompatActivity {
             if (id == R.id.it_about) {
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.fragment_container, new About())
+                        .replace(R.id.fragment_container, new AboutFragment())
                         .commit();
             } else if (id == R.id.it_department) {
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.fragment_container, new Department())
+                        .replace(R.id.fragment_container, new DepartmentFragment())
                         .commit();
             } else if (id == R.id.it_events) {
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.fragment_container, new Events())
+                        .replace(R.id.fragment_container, new EventsFragment())
                         .commit();
             } else if (id == R.id.it_contacts) {
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.fragment_container, new Contact())
+                        .replace(R.id.fragment_container, new ContactsFragment())
                         .commit();
             } else if (id == R.id.it_home) {
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container, new Home())
+                        .replace(R.id.fragment_container, new HomeFragment())
                         .commit();
             }
             drawerLayout.closeDrawers();

@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-public class Contact extends Fragment {
-    public Contact() {
-        super(R.layout.fragment_contact);
+public class DepartmentFragment extends Fragment {
+    public DepartmentFragment() {
+        super(R.layout.fragment_department);
     }
 
     @Override
@@ -20,6 +20,6 @@ public class Contact extends Fragment {
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_contact, container, false);
+        return inflater.inflate(R.layout.fragment_department, container, false);
     }
 }

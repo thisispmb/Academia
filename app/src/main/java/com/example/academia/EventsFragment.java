@@ -7,9 +7,10 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-public class About extends Fragment {
-    public About() {
-        super(R.layout.fragment_about);
+public class EventsFragment extends Fragment {
+
+    public EventsFragment() {
+        super(R.layout.fragment_events);
     }
 
     @Override
@@ -20,6 +21,6 @@ public class About extends Fragment {
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_about, container, false);
+        return inflater.inflate(R.layout.fragment_events, container, false);
     }
 }
